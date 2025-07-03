@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    # Constrói a imagem a partir do Dockerfile na pasta atual
+    build: .
+    container_name: name-api23
+    # Comando para iniciar a API com --reload, que reinicia o servidor a cada alteração no código
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+    # Mapeia a pasta atual para /app dentro do contêiner, permitindo o live-reload e a persistência do banco de dados
+    volumes:
+      - .:/app
+    # Mapeia a porta 8000 do contêiner para a porta 8000 da sua máquina
+    ports:
+      - "8000:8000"
+      
