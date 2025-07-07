@@ -25,6 +25,8 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
      ```
    - No Windows, abra um terminal no modo administrador e execute o comando:
    ```sh
+
+   
    Set-ExecutionPolicy RemoteSigned
    ```
 
@@ -66,3 +68,8 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
 
 ---
+
+
+gcloud auth login
+gcloud config set project PROJECT-ID
+ gcloud run deploy --port=8000
